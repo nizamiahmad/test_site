@@ -17,20 +17,28 @@ body {
     font-family: 'Outfit', sans-serif;
     background-color: var(--Light-gray);
 }
-    
 
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+    
 .container {
     background-color: var(--White);
     max-width: 23.4375em;
     margin:  0 auto;
+    padding: 1em;
+    border-radius: 1em;
 }
-
-
 .qr-code {
     width: 100%;
-
 }
 .container__qr {
     background: url(images/image-qr-code.png) no-repeat;
     background-size: cover;
+}
+
+.page-footer {
+    display: none;
 }
