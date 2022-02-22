@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Outfit:wght@100&display=swap');
-
+@import url('https://fonts.google.com/specimen/Outfit');
 :root {
     --White: hsl(0, 0%, 100%);
     --Light-gray: hsl(212, 45%, 89%);
@@ -13,7 +12,7 @@
 }
 
 body {
-    font-size: 0.9375em;
+    font-size: 1rem;
     font-family: 'Outfit', sans-serif;
     background-color: var(--Light-gray);
 }
@@ -22,23 +21,61 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 100vh;
 }
     
 .container {
     background-color: var(--White);
-    max-width: 23.4375em;
+    min-width: 23.4375em;
     margin:  0 auto;
     padding: 1em;
     border-radius: 1em;
 }
+
+@media (min-width:35em) {
+    .container {max-width: 30em;};
+}
+
 .qr-code {
     width: 100%;
 }
-.container__qr {
-    background: url(images/image-qr-code.png) no-repeat;
-    background-size: cover;
+
+.content {
+    text-align: center;
+    padding: 1em;
 }
 
+
+
+.content > h2 {
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-top: 0;
+    color: var(--Dark-blue);
+    font-size: 1.5rem;
+}
+
+.content > p {
+    font-weight: 400;
+    padding: 1em;
+    margin-top: 0;
+    color: var(--Grayish-blue);
+}
+
+@media (min-width: 35em) {
+    .content {padding: 1.5em;}
+    .content > h2 {font-size: 2rem}
+    .content > p {font-size: 1.3rem}
+}
 .page-footer {
     display: none;
 }
+
+@media (min-width: 35em) {
+    .page-footer {
+        display: block;
+        text-align: center;
+
+    }
+}
+
